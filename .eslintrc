@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-console": 0
+  }
+}
