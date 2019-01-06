@@ -1,17 +1,22 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
   entry: "./src/app.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
-  
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /(node_modules|lib)/,
+        loader: "eslint-loader",
+      },
+      {
+        test: /\.js$/,
         use: [
           {
             loader: 'babel-loader',
@@ -25,5 +30,5 @@ module.exports = {
       }
     ]
   },
-  devtool: "inline-source-map"
+  devtool: process.env.NODE_ENV !== "production" ? "inline-source-map" : false
 };
