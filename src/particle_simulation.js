@@ -1,4 +1,4 @@
-import THREE from 'three.js'
+import THREE from 'three'
 
 import {SNOISE_3D} from './noise.js'
 

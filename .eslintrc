@@ -3,8 +3,12 @@
     "browser": true,
     "es6": true
   },
-  "ecmaFeatures": {
-    "modules": true
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false
+    }
   },
   "extends": "eslint:recommended",
   "rules": {

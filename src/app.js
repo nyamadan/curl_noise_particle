@@ -1,6 +1,6 @@
 import 'babel-polyfill'
 
-import THREE from 'three.js'
+import THREE from 'three'
 import '../lib/OrbitControls.js'
 
 import Stats from 'stats.js'
