@@ -1,5 +1,3 @@
-import 'babel-polyfill'
-
 import THREE from 'three'
 import '../lib/OrbitControls.js'
 
